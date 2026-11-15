@@ -16,6 +16,18 @@ L'application utilise l'API **Open-Meteo** pour récupérer les informations mé
 - Afficher les températures minimales et maximales.
 - Gérer les erreurs et proposer une nouvelle tentative.
 
+
+## 🖼️ Captures d'écran
+
+### 1. Recherche et météo actuelle
+![Recherche et météo actuelle](./images/weather-current.png)
+
+### 2. Détails météorologiques
+![Détails météorologiques](./images/weather-details.png)
+
+### 3. Prévisions météorologiques sur 5 jours
+![Prévisions sur 5 jours](images/weather-forecast.png)
+
 ## 🛠️ Technologies utilisées
 
 - HTML5
@@ -92,6 +104,20 @@ Les données météorologiques dépendent également de leur disponibilité et d
 
 **Attribution :** Les données météorologiques sont fournies par [Open-Meteo](https://open-meteo.com/) sous licence CC BY 4.0.
 
+### Disponibilité et limites des données météorologiques
+
+- Les données météorologiques proviennent de modèles de prévision numérique qui sont généralement mis à jour toutes les quelques heures.
+- Les données disponibles et leur résolution peuvent varier selon la localisation géographique et le modèle météorologique utilisé.
+- Certaines variables météorologiques peuvent ne pas être disponibles pour toutes les régions.
+- Les conditions météorologiques affichées sont des estimations issues de modèles et ne représentent pas nécessairement des mesures en temps réel.
+- Open-Meteo ne garantit pas l'exactitude, l'exhaustivité ni la disponibilité continue des données.
+
+**Dans notre application :**
+- Nous affichons les conditions météorologiques actuelles fournies par l'API.
+- Nous limitons les prévisions à 5 jours grâce au paramètre `forecast_days=5`.
+- En cas d'indisponibilité du service, l'application affiche un message d'erreur à l'utilisateur.
+
+
 
 ## 📊 Exemple de réponse JSON et affichage des données
 
@@ -135,3 +161,10 @@ L'API Open-Meteo retourne une réponse au format JSON contenant les informations
 Les codes météo sont associés à des descriptions et des icônes grâce à l'objet JavaScript `WEATHER_CODES`.
 
 Les données quotidiennes sont transformées avec la méthode `map()` en objets JavaScript, puis affichées sous forme de cartes HTML grâce à `innerHTML`.
+
+
+### 🔐 Configuration de l'API
+
+L'application utilise l'API Open-Meteo, qui ne nécessite aucune clé API pour une utilisation gratuite non commerciale.
+
+Aucune clé API ni variable secrète n'est nécessaire pour lancer le projet.
