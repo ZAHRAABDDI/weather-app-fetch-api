@@ -30,3 +30,6 @@
 ### 3. Conclusion
 
 Les tests effectués permettent de vérifier la gestion des erreurs de l'application Weather App. Les messages d'erreur sont affichés clairement et l'utilisateur peut relancer sa recherche grâce au bouton « Réessayer ».
+
+
+
